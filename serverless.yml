@@ -1,0 +1,15 @@
+service: serverless-session1
+provider:
+  name: aws
+  region: 'us-east-2'
+  memorySize: 256
+  architecture: arm64
+  runtime: python3.9
+  profile: test
+  timeout: 30
+  logRetentionInDays: 30
+
+deploymentBucket:
+  name:
+
+functions: ${file(./config/function.yml)}
